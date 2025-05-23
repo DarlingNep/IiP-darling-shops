@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Женская одежда | DARLING</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="logo-container">
+                <img src="images/logo.jpg" alt="DARLING Logo" class="logo">
+            </div>
+            
+            <div class="banner-container">
+                <img src="images/banner.jpg" alt="DARLING Banner" class="banner">
+            </div>
+            
+            <div class="user-container">
+                <div class="auth-buttons">
+                    <button id="login-btn" class="auth-btn">Войти</button>
+                    <button id="register-btn" class="auth-btn">Регистрация</button>
+                </div>
+                <div class="sale-items">
+                    <h3>Товары по акции</h3>
+                    <div class="sale-scroll">
+                        <div class="sale-item">
+                          <img src="images/men/Шорты Dime.jpg" alt="Sale">
+                            <p>Шорты Dime - 1 999 ₽</p>
+                        </div>
+                        <div class="sale-item">
+                           <img src="images/women/Куртка MiuMiu.jpg" alt="Sale 2">
+                            <p>Куртка MiuMiu - 5 499 ₽</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <nav class="categories">
+            <ul>
+                <li><a href="men.html">Мужская одежда</a></li>
+                <li><a href="women.html" class="active">Женская одежда</a></li>
+                <li><a href="accessories.html">Аксессуары</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <section class="category-header">
+                <h1>Женская одежда</h1>
+                <div class="category-filters">
+                    <select id="sort-by">
+                        <option value="price-asc">По возрастанию цены</option>
+                        <option value="price-desc">По убыванию цены</option>
+                        <option value="popular">По популярности</option>
+                    </select>
+                    <select id="filter-by">
+                        <option value="all">Все товары</option>
+                        <option value="dresses">Платья</option>
+                        <option value="tops">Блузки и топы</option>
+                        <option value="pants">Брюки и юбки</option>
+                        <option value="outerwear">Верхняя одежда</option>
+                    </select>
+                </div>
+            </section>
+
+            <section class="products-section">
+                <div class="products-grid" id="women-products">
+                    <!-- Товары будут добавлены через JavaScript -->
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-section about">
+                <h3>О нас</h3>
+                <p>DARLING - это современный магазин модной одежды, предлагающий стильные и качественные вещи для мужчин и женщин.</p>
+            </div>
+            <div class="footer-section contact">
+                <h3>Контакты</h3>
+                <p><i class="fas fa-map-marker-alt"></i> г. Москва, Сиреневый бульвар, 31</p>
+                <p><i class="fas fa-phone"></i> +7 (999) 888-13-37 </p>
+                <p><i class="fas fa-envelope"></i> darling-shop@gmail.ru</p>
+            </div>
+            <div class="footer-section social">
+                <h3>Мы в соцсетях</h3>
+                <div class="social-icons">
+                    <a href="#"> Отсутствует<i class="fab fa-instagram"></i></a>
+                    <a href="#">https://vk.com/myforeverl<i class="fab fa-vk"></i></a>
+                    <a href="#">https://t.me/DarIing888<i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+        </footer>
+
+        <div class="cart-icon" id="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+        </div>
+    </div>
+
+    <!-- Модальные окна -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Вход</h2>
+            <form id="login-form">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Пароль" required>
+                <button type="submit">Войти</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Регистрация</h2>
+            <form id="register-form">
+                <input type="text" placeholder="Имя" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Пароль" required>
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content cart-modal-content">
+            <span class="close">&times;</span>
+            <h2>Корзина</h2>
+            <div class="cart-items">
+                <!-- Товары в корзине будут добавлены через JavaScript -->
+            </div>
+            <div class="cart-total">
+                <p>Итого: <span id="total-price">0</span> ₽</p>
+                <button id="checkout-btn">Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
